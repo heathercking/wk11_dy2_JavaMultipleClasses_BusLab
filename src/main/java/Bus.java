@@ -25,7 +25,8 @@ public class Bus {
         return this.passengers.size();
     }
 
-    public void addPassengers(Person person) {
+    public void pickUpPassengersFromBusStop(BusStop busstop) {
+        Person person = busstop.removePassengerFromQueue();
         if (passengerCount() < this.capacity){
             this.passengers.add(person);
         }
